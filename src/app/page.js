@@ -1,94 +1,70 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJs, faNodeJs, faReact, faPython, faAws, faApple, faAndroid, faGithub, faTwitter, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+      <div className={styles.center}>
+        <div className={styles.title}>
+          <h1>SoftSolutions</h1>
+          <h2>Soluciones suaves para problemas dificiles</h2>
         </div>
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <div className={styles.grid2}>
+          <div>
+            <h1> Ivan Daniel Hernández Rocha </h1>
+            <h3>Ing. en Sistemas Computacionales </h3>
+            <h3> Desarrollador de Software</h3>
+          </div>
+          <div>
+            <Image
+              src="/1.jpg"
+              alt="Next.js Logo"
+              // fill={true}
+              width={255}
+              height={255}
+              priority
+            />
+          </div>
+        </div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={styles.gridStack}>
+        <FontAwesomeIcon icon={faJs} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faNodeJs} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faReact} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faPython} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faDatabase} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faAws} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faApple} style={{ height: "5em" }} />
+        <FontAwesomeIcon icon={faAndroid} style={{ height: "5em" }} />
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.center}>
+        <div className={styles.card}>
+          <a
+            href="https://utopia-rnttb2v36-ivansoftsolutions-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>
+              Utopia WebApp <span>-&gt;</span>
+            </h2>
+            <p>Una aplicación de administracion y control de inventario para una compañía de pieles.</p>
+            <p>React, MongoDB </p>
+          </a>
+          <a
+            href="https://github.com/IvanSoftSolutions/utopia_new"
+            target='_blank'>
+            <FontAwesomeIcon icon={faGithub} style={{ height: "2em" }} />
+          </a>
+        </div>
       </div>
     </main>
   )
