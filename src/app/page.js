@@ -47,6 +47,12 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
+        <div className={styles.subtitle}>
+          <h2>Proyectos</h2>
+        </div>
+      </div>
+
+      <div className={styles.center}>
         <div className={styles.card}>
           <a
             href="https://utopia-rnttb2v36-ivansoftsolutions-projects.vercel.app/"
@@ -66,6 +72,33 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      <div className={styles.center}>
+        <div className={styles.subtitle}>
+          <h2>Contacto</h2>
+        </div>
+      </div>
+      <div className={styles.grid}>
+        <a href="https://twitter.com/_SoftSolutions" target='_blank'>
+          <FontAwesomeIcon icon={faTwitter} style={{ height: "2em" }} />
+        </a>
+        <a href="https://www.instagram.com/softsolutionsmx/" target='_blank'>
+          <FontAwesomeIcon icon={faInstagram} style={{ height: "2em" }} />
+        </a>
+        <a href="https://www.tiktok.com/@softsolutions_mx" target='_blank'>
+          <FontAwesomeIcon icon={faTiktok} style={{ height: "2em" }} />
+        </a>
+        <a href="" >
+          <FontAwesomeIcon icon={faEnvelope} style={{ height: "2em" }} />
+        </a>
+      </div>
+      <div className={styles.grid}>
+        <p>@_SoftSolutions</p>
+        <p>softsolutionsmx</p>
+        <p>softsolutions_mx</p>
+        <p>softsolutions4@outlook.com</p>
+      </div>
+
     </main>
   )
 }
