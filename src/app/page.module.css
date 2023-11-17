@@ -177,7 +177,10 @@
     padding: 1.5rem;
   }
 
-  .title h1,
+  .title h1 {
+    font-size: 3rem;
+  }
+
   .title h2 {
     padding: 0 5rem 0 5rem;
   }
