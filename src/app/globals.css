@@ -32,6 +32,11 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --d: 2500ms;
+  --c1: #5ddcff;
+  --c2: #c20041;
+  --angle: 90deg;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,9 +66,10 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
 
-    --card-height: 65vh;
-    --card-width: calc(var(--card-height) / 1.5);
-
+    --d: 2500ms;
+    --c1: #5ddcff;
+    --c2: #4e00c2;
+    --angle: 90deg;
   }
 }
 
