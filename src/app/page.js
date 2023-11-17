@@ -79,24 +79,32 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.grid}>
-        <a href="https://twitter.com/_SoftSolutions" target='_blank'>
-          <FontAwesomeIcon icon={faTwitter} style={{ height: "2em" }} />
-        </a>
-        <a href="https://www.instagram.com/softsolutionsmx/" target='_blank'>
-          <FontAwesomeIcon icon={faInstagram} style={{ height: "2em" }} />
-        </a>
-        <a href="https://www.tiktok.com/@softsolutions_mx" target='_blank'>
-          <FontAwesomeIcon icon={faTiktok} style={{ height: "2em" }} />
-        </a>
-        <a href="" >
-          <FontAwesomeIcon icon={faEnvelope} style={{ height: "2em" }} />
-        </a>
+        <div>
+          <a href="https://twitter.com/_SoftSolutions" target='_blank'>
+            <FontAwesomeIcon icon={faTwitter} style={{ height: "2em" }} />
+          </a>
+          <p>@_SoftSolutions</p>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/softsolutionsmx/" target='_blank'>
+            <FontAwesomeIcon icon={faInstagram} style={{ height: "2em" }} />
+          </a>
+          <p>softsolutionsmx</p>
+        </div>
+        <div>
+          <a href="https://www.tiktok.com/@softsolutions_mx" target='_blank'>
+            <FontAwesomeIcon icon={faTiktok} style={{ height: "2em" }} />
+          </a>
+          <p>softsolutions_mx</p>
+        </div>
+        <div>
+          <a href="" >
+            <FontAwesomeIcon icon={faEnvelope} style={{ height: "2em" }} />
+          </a>
+          <p>softsolutions4@outlook.com</p>
+        </div>
       </div>
       <div className={styles.grid}>
-        <p>@_SoftSolutions</p>
-        <p>softsolutionsmx</p>
-        <p>softsolutions_mx</p>
-        <p>softsolutions4@outlook.com</p>
       </div>
 
     </main>
