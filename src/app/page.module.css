@@ -177,6 +177,11 @@
     padding: 1.5rem;
   }
 
+  .title h1,
+  .title h2 {
+    padding: 0 3rem 0 3rem;
+  }
+
   .grid2 {
     padding: 2rem;
     grid-template-columns: 1fr;
