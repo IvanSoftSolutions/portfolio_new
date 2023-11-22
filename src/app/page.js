@@ -1,3 +1,13 @@
+'use client'
+import { useState } from 'react';
+import axios from 'axios';
+import Box from '@mui/material/Box';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Collapse from '@mui/material/Collapse';
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,6 +15,51 @@ import { faJs, faNodeJs, faReact, faPython, faAws, faApple, faAndroid, faGithub,
 import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openError, setOpenError] = useState(false);
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+    event.preventDefault();
+
+  };
+
+  const sendMail = (event) => {
+    event.preventDefault();
+
+    let data = {
+      email: email,
+      name: name,
+      message: message
+    }
+
+    axios
+      .post('https://utopia-new-api.onrender.com/send_mail/', data)
+      .then((response) => {
+        if (response.status === 201) {
+          setOpenError(false);
+          setOpenSuccess(true);
+        }
+        // console.log(response.data.data);
+      })
+      .catch((error) => {
+        setOpenSuccess(false);
+        setOpenError(true);
+        console.log(error);
+      })
+  }
+
   return (
     <main className={styles.main}>
 
@@ -105,6 +160,58 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.grid}>
+      </div>
+
+      <div className={styles.center}>
+        <div className={styles.subtitle}>
+          <h2>Escribenos</h2>
+        </div>
+      </div>
+      <div>
+        <form className={styles.contact} onSubmit={sendMail}>
+          <input className={styles.contactChild} type="text" name="name" placeholder="Nombre y Apellido" value={name} onChange={handleNameChange} />
+          <input className={styles.contactChild} type="email" name="email" placeholder="Correo Electronico" value={email} onChange={handleEmailChange} />
+          <textarea className={styles.contactChild} name="message" rows="5" cols="55" placeholder="Mensaje" value={message} onChange={handleMessageChange}></textarea>
+          <button className={styles.contactChild} type='submit'>Enviar</button>
+        </form>
+        <Box sx={{ width: '100%' }}>
+          <Collapse in={openSuccess}>
+            <Alert variant="filled" severity="success" action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpenSuccess(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }>
+              <AlertTitle>Tu mensaje ha sido enviado.</AlertTitle>
+              En breve nos pondremos en contacto contigo.
+            </Alert>
+          </Collapse>
+        </Box>
+        <Box sx={{ width: '100%' }}>
+          <Collapse in={openError}>
+            <Alert variant="filled" severity="error" action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpenError(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }>
+              <AlertTitle> Mensaje no enviado.</AlertTitle>
+              Por favor llena todos los campos
+            </Alert>
+          </Collapse>
+        </Box>
       </div>
 
     </main>
