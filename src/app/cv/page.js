@@ -49,7 +49,7 @@ export default function cvPage() {
                             <hr />
                             <h2>Educacion</h2>
                             <p>Universidad de Guanajuato</p>
-                            <p>Bachelor's Degree</p>
+                            <p>Bachelor&apos;s Degree</p>
                             <p>
                                 <FontAwesomeIcon icon={faGraduationCap} style={{ height: "1.5em" }} bounce /> (01 - 2022)</p>
                         </div>

@@ -125,7 +125,7 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <h2>
-                  Utopia WebApp <span>-&gt;</span>
+                  Utopia WebApp -&gt;
                 </h2>
                 <p>Una aplicación de administracion y control de inventario para una compañía de pieles.</p>
                 <p>React, MongoDB </p>
