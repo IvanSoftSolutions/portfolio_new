@@ -1,0 +1,312 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.main::before {
+    background: var(--secondary-glow);
+    border-radius: 50%;
+    width: 480px;
+    height: 360px;
+    margin-left: -400px;
+}
+
+.main::after {
+    background: var(--primary-glow);
+    width: 240px;
+    height: 180px;
+    z-index: -1;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    left: 50%;
+    position: absolute;
+    filter: blur(45px);
+    transform: translateZ(0);
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5rem;
+}
+
+.header a {
+    font-size: large;
+    padding: 1.25rem 1.25rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin: 6rem 0 2rem;
+}
+
+.gridCV {
+    display: grid;
+    max-width: 100%;
+    width: var(--max-width);
+    padding: 1rem;
+    margin: 1.25rem;
+    grid-template-columns: 25rem 42.5rem;
+    background-color: rgba(var(--callout-rgb), 0.5);
+    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+    border-radius: var(--border-radius);
+}
+
+.gridCV h1 {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
+.gridCV hr {
+    margin: auto;
+    width: 85%;
+}
+
+.gridCV h2,
+.gridCV p {
+    margin: 1.25rem 0 1.25rem;
+}
+
+.gridCV p {
+    padding: 0 1.5rem 0 1.5rem;
+    text-align: justify;
+}
+
+.gridCV h3:last-of-type {
+    padding-top: 1.25rem;
+}
+
+.gridCV h3 {
+    display: flex;
+    align-self: left;
+    padding-left: 1.5rem;
+}
+
+.CVGridRight,
+.CVGridLeft {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+.CVGridLeft p {
+    text-align: center;
+}
+
+.contactCV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-left: 4.5rem; */
+    justify-content: center;
+}
+
+.tubes {
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.tube {
+    --width: 2rem;
+    --skew: .5rem;
+    --tube-color: #fff;
+    --anim-duration: 3s;
+    width: var(--width);
+    aspect-ratio: 1/4.5;
+    margin-top: var(--skew);
+    border-top-left-radius: 50% var(--skew);
+    border-top-right-radius: 50% var(--skew);
+    border-bottom-left-radius: 50% var(--skew);
+    border-bottom-right-radius: 50% var(--skew);
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    position: relative;
+}
+
+.tube>.cap {
+    --cap-height: calc(var(--width) * .5);
+    height: calc(var(--cap-height) + var(--skew));
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background-color: var(--tube-color);
+    background-image: linear-gradient(to right, rgb(0 0 0 / .25), transparent 50%);
+    position: relative;
+    z-index: 2;
+}
+
+.tube>.cap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(var(--skew) * 2);
+    background-color: var(--tube-color);
+    background-image: linear-gradient(to left, rgb(0 0 0 / .25), transparent);
+    border-radius: 50%;
+    top: calc(var(--skew) * -1);
+}
+
+.tube>.base {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    background-color: var(--tube-color);
+    background-image: linear-gradient(to right, rgb(0 0 0 / .25), transparent 50%);
+    position: relative;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
+    /* padding-top: calc(var(--width) * 0.5 + var(--skew)); */
+    /* padding-bottom: calc(var(--width) * .1); */
+    overflow: hidden;
+}
+
+.tube>.base>.icon {
+    width: 100%;
+    color: var(--fill-color);
+    background-color: rgb(0 0 0 / .1);
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+    /* padding-top: calc(var(--skew) + var(--width) * .1); */
+    /* padding-bottom: calc(var(--width) * .1); */
+    display: grid;
+    place-content: center;
+    margin-top: calc(var(--skew) * -.5);
+    border-bottom-left-radius: 50% var(--skew);
+    border-bottom-right-radius: 50% var(--skew);
+    --mask-image: radial-gradient(ellipse 100% calc(var(--skew) * 2) at center top, transparent calc(50% - 1px), black calc(50% + 1px));
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+    font-size: calc(var(--width) * .25);
+}
+
+.tube>.fill {
+    margin-top: calc(var(--skew) * -1);
+    position: relative;
+    z-index: 1;
+    --glas-gradient:
+        linear-gradient(to right,
+            rgb(0 0 0 / .25),
+            transparent 10% 15%,
+            rgb(255 255 255 / .5) 20%,
+            transparent 50% 90%,
+            rgb(0 0 0 / .125));
+    background-image: var(--glas-gradient);
+}
+
+.tube>.fill::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    --fill-start: var(--skew);
+    --fill-end: calc(var(--percent) * 1% + var(--skew));
+    height: var(--fill-start);
+    background-color: var(--fill-color);
+    bottom: calc(var(--skew) * -1);
+    border-bottom-left-radius: 50% var(--skew);
+    border-bottom-right-radius: 50% var(--skew);
+    background-image:
+        var(--glas-gradient),
+        radial-gradient(ellipse 100% calc(var(--skew) * 2) at center calc(100% - var(--skew)),
+            rgb(255 255 255 /.125) calc(50% - 1px),
+            transparent 50%),
+        linear-gradient(to right,
+            rgb(0 0 0 / .25),
+            transparent 50% 70%,
+            rgb(0 0 0 / .25));
+    animation: fill-before var(--anim-duration) linear forwards;
+    animation-delay: 3s;
+}
+
+.tube>.fill::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(var(--skew) * 2);
+    background-color: var(--fill-color);
+    border-radius: 50%;
+    --fill-start: calc(var(--skew) * -1);
+    --fill-end: calc(var(--percent) * 1% - var(--skew));
+    bottom: var(--fill-start);
+    background-image:
+        var(--glas-gradient),
+        linear-gradient(to left, rgb(0 0 0 / .25), transparent 50%);
+    animation: fill-after var(--anim-duration) linear forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fill-before {
+    to {
+        height: var(--fill-end)
+    }
+}
+
+@keyframes fill-after {
+    to {
+        bottom: var(--fill-end)
+    }
+}
+
+.tubes {
+    gap: calc(3vw + 0.2rem);
+    /* (320,8)(1920,32) */
+    ;
+}
+
+.tube {
+    --width: calc(4.75vw + 0.6rem);
+    /* (320,24)(1920,96) */
+    ;
+    --skew: calc(0.5vw + 0.1rem);
+    /* (320,4)(1920,16) */
+    ;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .main {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .vercelLogo {
+        filter: invert(1);
+    }
+
+    .logo {
+        filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    }
+}
