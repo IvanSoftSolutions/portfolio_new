@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareJs, faNodeJs, faReact, faPython, faAws, faApple, faAndroid, faGithub, faTwitter, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+
 export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -87,11 +88,11 @@ export default function Home() {
               </div>
               <div>
                 <Image
-                  src="/1.jpg"
-                  alt="Next.js Logo"
+                  src="/profile_site.jpg"
+                  alt="Profile Picture"
                   // fill={true}
-                  width={255}
-                  height={255}
+                  width={220}
+                  height={340}
                   priority
                 />
               </div>
@@ -173,7 +174,7 @@ export default function Home() {
 
           <div className={styles.center}>
             <div className={styles.subtitle}>
-              <h2>Escribenos</h2>
+              <h2>Escríbenos</h2>
             </div>
           </div>
           <div>

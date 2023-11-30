@@ -22,14 +22,14 @@ export default function cvPage() {
                     <div className={styles.gridCV}>
                         <div className={styles.CVGridLeft}>
                             <Image
-                                src="/1.jpg"
+                                src="/profile_cv.jpg"
                                 alt="Next.js Logo"
                                 // fill={true}
-                                width={255}
-                                height={255}
+                                width={220}
+                                height={320}
                                 priority
                             />
-                            <h2>Contact</h2>
+                            <h2>Contacto</h2>
                             <div className={styles.contactCV}>
                                 <FontAwesomeIcon icon={faAt} style={{ height: "1.5em" }} bounce />
                                 <p>ivan.daniel.hdz@gmail.com</p>
@@ -40,16 +40,16 @@ export default function cvPage() {
                             </div>
                             <div className={styles.contactCV}>
                                 <FontAwesomeIcon icon={faGlobe} style={{ height: "1.5em" }} bounce />
-                                <p>www.sofsolutions.com.mx</p>
+                                <p>www.softsolutions.com.mx</p>
                             </div>
                             <div className={styles.contactCV}>
                                 <FontAwesomeIcon icon={faLocationDot} style={{ height: "1.5em" }} bounce />
                                 <p>Salamanca, GTO, Mex</p>
                             </div>
                             <hr />
-                            <h2>Educacion</h2>
+                            <h2>Educación</h2>
                             <p>Universidad de Guanajuato</p>
-                            <p>Bachelor&apos;s Degree</p>
+                            <p>Ing. en Sistemas Computacionales</p>
                             <p>
                                 <FontAwesomeIcon icon={faGraduationCap} style={{ height: "1.5em" }} bounce /> (01 - 2022)</p>
                         </div>
