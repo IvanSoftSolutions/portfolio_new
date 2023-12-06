@@ -22,7 +22,7 @@ export default function cvPage() {
                     <div className={styles.center}>
                         <a
                             // className={styles.downloadButton}
-                            href="/cv_spanish.pdf"
+                            href="/HernandezIvan_CV_spanish.pdf"
                             download="HernandezIvan_CV_Spanish"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function cvPage() {
                     <div className={styles.center}>
                         <a
                             // className={styles.downloadButton}
-                            href="/cv_english.pdf"
+                            href="/HernandezIvan_CV_english.pdf"
                             download="HernandezIvan_CV_English"
                             target="_blank"
                             rel="noopener noreferrer"
