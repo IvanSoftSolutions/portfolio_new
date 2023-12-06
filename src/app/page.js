@@ -118,7 +118,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.center}>
+          <div className={styles.grid3}>
             <div className={styles.card}>
               <a
                 href="https://utopia-rnttb2v36-ivansoftsolutions-projects.vercel.app/"
@@ -128,11 +128,50 @@ export default function Home() {
                 <h2>
                   Utopia WebApp -&gt;
                 </h2>
-                <p>Una aplicación de administracion y control de inventario para una compañía de pieles.</p>
-                <p>React, MongoDB </p>
+                <p>Una aplicación de administracion y control de inventario para una compañía de pieles. <strong>Online</strong></p>
+                <p>Next.js, React </p>
               </a>
               <a
+                className={styles.cardGithubIcon}
                 href="https://github.com/IvanSoftSolutions/utopia_new"
+                target='_blank'>
+                <FontAwesomeIcon icon={faGithub} style={{ height: "2em" }} />
+              </a>
+            </div>
+            <div className={styles.card}>
+              <a
+                href="https://github.com/IvanSoftSolutions/utopia_new_server"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2>
+                  Utopia WebApp Server -&gt;
+                </h2>
+                <p>Backend para Utopia WebApp.</p>
+                <p> Node, MongoDB </p>
+              </a>
+              <a
+                className={styles.cardGithubIcon}
+                href="https://github.com/IvanSoftSolutions/utopia_new_server"
+                target='_blank'>
+                <FontAwesomeIcon icon={faGithub} style={{ height: "2em" }} />
+              </a>
+            </div>
+            <div className={styles.card}>
+              <a
+                href="https://github.com/IvanSoftSolutions/portfolio_new"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h2>
+                  Website / Portfolio -&gt;
+                </h2>
+                <p>Sitio web personal y portafolio.</p>
+                <p>Next.js, React </p>
+              </a>
+              <a
+                className={styles.cardGithubIcon}
+                href="https://github.com/IvanSoftSolutions/portfolio_new"
                 target='_blank'>
                 <FontAwesomeIcon icon={faGithub} style={{ height: "2em" }} />
               </a>

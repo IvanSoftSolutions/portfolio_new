@@ -47,6 +47,23 @@
     margin: 6rem 0 2rem;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.grid2 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(50%, 100%));
+    max-width: 100%;
+    width: var(--max-width);
+    padding: 1rem;
+    margin: 1.25rem;
+}
+
 .gridCV {
     display: grid;
     max-width: 100%;
@@ -278,13 +295,6 @@
     --skew: calc(0.5vw + 0.1rem);
     /* (320,4)(1920,16) */
     ;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
 /* Mobile */

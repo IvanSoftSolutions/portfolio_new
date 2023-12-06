@@ -18,6 +18,30 @@ export default function cvPage() {
                 </div>
             </header>
             <div className={styles.main}>
+                <div className={styles.grid2}>
+                    <div className={styles.center}>
+                        <a
+                            // className={styles.downloadButton}
+                            href="/cv_spanish.pdf"
+                            download="HernandezIvan_CV_Spanish"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Descargar CV en español
+                        </a>
+                    </div>
+                    <div className={styles.center}>
+                        <a
+                            // className={styles.downloadButton}
+                            href="/cv_english.pdf"
+                            download="HernandezIvan_CV_English"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Download CV in English
+                        </a>
+                    </div>
+                </div>
                 <div className={styles.center}>
                     <div className={styles.gridCV}>
                         <div className={styles.CVGridLeft}>
